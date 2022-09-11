@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<form action="#" th:action="@{/}" th:object="${personForm}"
+		method="post">
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" th:field="*{firstName}"/></td>
+				<td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First
+					Name Error</td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" th:field="*{lastName}"/></td>
+				<td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last
+					Name Error</td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" th:field="*{email}"/></td>
+				<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email
+					Error</td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="text" th:field="*{password}"/></td>
+				<td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password
+					Error</td>
+			</tr>
+			<tr>
+				<td>Age:</td>
+				<td><input type="text" th:field="*{age}"/></td>
+				<td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age
+					Error</td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td><input type="text" th:field="*{gender}"/></td>
+				<td th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}">Gender
+					Error</td>
+			</tr>
+			<tr>
+				<td>Date of Birth:</td>
+				<td><input type="text" th:field="*{birthday}"/></td>
+				<td th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Date
+					of Birth Error</td>
+			</tr>
+			<tr>
+				<td>Phone No:</td>
+				<td><input type="text" th:field="*{phNo}"/></td>
+				<td th:if="${#fields.hasErrors('phNo')}" th:errors="*{phNo}">Phone
+					No Error</td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
